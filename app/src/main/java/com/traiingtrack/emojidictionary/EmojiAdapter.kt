@@ -27,6 +27,9 @@ class EmojiAdapter(val emojis: ArrayList<String>): RecyclerView.Adapter<EmojiAda
         var view: View = v
         var emoji: String = "👍"
 
+        init{
+            v.setOnClickListener(this)
+        }
 
 
         fun bindEmoji(emoji: String){
@@ -37,7 +40,6 @@ class EmojiAdapter(val emojis: ArrayList<String>): RecyclerView.Adapter<EmojiAda
         override fun onClick(v: View?) {
             val detailIntent = Intent(view.context, EmojiDetailActivity::class.java)
             startActivity(view.context, detailIntent, null)
-
 
         }
 
