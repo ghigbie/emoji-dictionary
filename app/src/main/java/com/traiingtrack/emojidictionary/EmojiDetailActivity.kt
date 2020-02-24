@@ -8,5 +8,7 @@ class EmojiDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_emoji_detail)
+
+        var emoji: String = ""
     }
 }
