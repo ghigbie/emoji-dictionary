@@ -2,6 +2,7 @@ package com.traiingtrack.emojidictionary
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_emoji_detail.*
 
 class EmojiDetailActivity : AppCompatActivity() {
 
@@ -9,6 +10,15 @@ class EmojiDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_emoji_detail)
 
-        var emoji: String = ""
     }
+
+    override fun onStart() {
+        super.onStart()
+
+        val emoji = intent.extras?.getString("emoji")
+        emojiDetail.text = emoji
+
+    }
+
+
 }
