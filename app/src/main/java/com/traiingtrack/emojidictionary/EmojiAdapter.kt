@@ -1,9 +1,11 @@
 package com.traiingtrack.emojidictionary
 
+import android.content.Intent
 import android.view.LayoutInflater
 import androidx.recyclerview.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.startActivity
 import kotlinx.android.synthetic.main.recyclerview_item_row.view.*
 
 class EmojiAdapter(val emojis: ArrayList<String>): RecyclerView.Adapter<EmojiAdapter.TextHolder>() {
@@ -33,7 +35,10 @@ class EmojiAdapter(val emojis: ArrayList<String>): RecyclerView.Adapter<EmojiAda
         }
 
         override fun onClick(v: View?) {
-            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            val detailIntent = Intent(view.context, EmojiDetailActivity::class.java)
+            startActivity(view.context, detailIntent, null)
+
+
         }
 
     }
