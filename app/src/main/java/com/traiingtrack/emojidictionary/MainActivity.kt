@@ -17,8 +17,24 @@ class MainActivity : AppCompatActivity() {
         layoutManager = LinearLayoutManager(this)
         recyler_view.layoutManager = layoutManager
 
-        adapter= EmojiAdapter()
+        val emojis = arrayListOf<String>(
+            "😈",
+            "😼",
+            "🤖",
+            "🎃",
+            "🦕",
+            "🐃",
+            "🐝",
+            "🐛",
+            "🦑",
+            "🦀",
+            "🐡",
+            "🦜",
+            "🐳"
+        )
+        adapter = EmojiAdapter(emojis)
         recyler_view.adapter = adapter
 
     }
 }
+
